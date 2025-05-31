@@ -1,0 +1,29 @@
+public class MainAntiPatternSingleton {
+    public static void main(String[] args) {
+        System.out.println("--- Demonstracao Anti-Pattern Singleton (Múltiplas Instâncias) ---");
+
+        ConfiguracoesGlobaisAntiPattern configModuloA = new ConfiguracoesGlobaisAntiPattern("servidor-dev", 8080);
+        System.out.println("Modulo A usa: " + configModuloA.toString());
+
+
+        ConfiguracoesGlobaisAntiPattern configModuloB = new ConfiguracoesGlobaisAntiPattern("servidor-prod", 80);
+        System.out.println("Modulo B usa: " + configModuloB.toString());
+
+        ConfiguracoesGlobaisAntiPattern configModuloC = new ConfiguracoesGlobaisAntiPattern("servidor-default", 9090);
+        System.out.println("Modulo C usa: " + configModuloC.toString());
+
+
+        System.out.println("\nProblema: Temos múltiplas instâncias de configuração, potencialmente inconsistentes.");
+        System.out.println("Instancia Modulo A == Instancia Modulo B? " + (configModuloA == configModuloB));
+        System.out.println("Instancia Modulo A == Instancia Modulo C? " + (configModuloA == configModuloC));
+
+        System.out.println("\n--- Comparando com o Singleton Correto ---");
+        ConfiguracoesSistema configReal = ConfiguracoesSistema.getInstancia(); 
+        configReal.setModoAplicacao("Modo Teste Singleton");
+        System.out.println("Singleton Correto 1: " + configReal.getModoAplicacao() + " (HashCode: " + configReal.hashCode() + ")");
+
+        ConfiguracoesSistema configReal2 = ConfiguracoesSistema.getInstancia();
+        System.out.println("Singleton Correto 2: " + configReal2.getModoAplicacao() + " (HashCode: " + configReal2.hashCode() + ")");
+        System.out.println("Singleton Correto 1 == Singleton Correto 2? " + (configReal == configReal2));
+    }
+}
