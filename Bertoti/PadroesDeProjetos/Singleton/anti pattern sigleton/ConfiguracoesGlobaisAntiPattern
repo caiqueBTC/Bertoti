@@ -1,0 +1,32 @@
+public class ConfiguracoesGlobaisAntiPattern {
+    private String nomeDoServidor;
+    private int portaDoServidor;
+
+   
+    public ConfiguracoesGlobaisAntiPattern(String nomeDoServidor, int portaDoServidor) {
+        this.nomeDoServidor = nomeDoServidor;
+        this.portaDoServidor = portaDoServidor;
+        System.out.println("Nova instancia de ConfiguracoesGlobaisAntiPattern criada: " + this.toString());
+    }
+
+    public String getNomeDoServidor() {
+        return nomeDoServidor;
+    }
+
+    public void setNomeDoServidor(String nomeDoServidor) {
+        this.nomeDoServidor = nomeDoServidor;
+    }
+
+    public int getPortaDoServidor() {
+        return portaDoServidor;
+    }
+
+    public void setPortaDoServidor(int portaDoServidor) {
+        this.portaDoServidor = portaDoServidor;
+    }
+
+    @Override
+    public String toString() {
+        return "Servidor: " + nomeDoServidor + ", Porta: " + portaDoServidor + " (HashCode: " + hashCode() + ")";
+    }
+}
