@@ -1,4 +1,4 @@
-## 👨‍💻 Sobre Mimtec
+## 👨‍💻 Sobre Mim
 
 Meu nome é **Caique Ramon Carvalho de Almeida**, tenho 21 anos e atualmente **cursando Banco de Dados**. Minha paixão é transformar ideias em realidade através da tecnologia. Durante minha formação, tenho focado no desenvolvimento backend, buscando criar soluções de software robustas e eficientes. Tenho grande interesse na arquitetura de sistemas backend e no gerenciamento de dados, áreas que exploro ativamente nos projetos acadêmicos. Na faculdade, desenvolvemos projetos em parceria com empresas reais, o que proporciona uma valiosa experiência prática no desenvolvimento de software.
 
